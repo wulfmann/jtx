@@ -28,10 +28,8 @@ function _jx (item, result, options) {
 
 function jx (json, options) {
   var start = []
-  var defaults ={
-    header: false,
-    indexes: false
-  }
+  var defaults = { header: false }
+
   var settings = Object.assign({}, defaults, options)
 
   if (settings.header) {

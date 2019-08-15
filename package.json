@@ -16,12 +16,15 @@
     "jtx": "bin/jtx.js"
   },
   "scripts": {
-    "build": "microbundle",
+    "build": "microbundle --compress --raw",
     "dev": "microbundle watch",
-    "test": "jest"
+    "test": "jest",
+    "bump": "standard-version",
+    "release": "yarn test && yarn bump && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags"
   },
   "devDependencies": {
     "jest": "^24.8.0",
-    "microbundle": "^0.11.0"
+    "microbundle": "^0.11.0",
+    "standard-version": "^7.0.0"
   }
 }

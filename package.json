@@ -20,7 +20,8 @@
     "dev": "microbundle watch",
     "test": "jest",
     "bump": "standard-version",
-    "release": "yarn test && yarn bump && git push --follow-tags origin master"
+    "release": "yarn test && yarn bump && git push --follow-tags origin master",
+    "benchmark": "node test/bm"
   },
   "devDependencies": {
     "jest": "^24.8.0",

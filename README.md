@@ -80,9 +80,9 @@ Example Two:
 `test.json`
 
 ```json
-    {
-        "hello": "there"
-    }
+{
+    "hello": "there"
+}
 ```
 
 ```bash

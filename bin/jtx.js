@@ -1,14 +1,33 @@
 #! /usr/bin/env node
+const fs = require('fs')
+const jtx = require('../dist/jtx')
+
+const isFile = /^(.+)\/([^\/]+)$/
+
 const input = process.argv.slice(2)
 
-try {
-    const data = JSON.parse(input[0])
-    console.log(data)
-} catch (e) {
-    if (e instanceof SyntaxError) {
-        // throw new SyntaxError('Your input was not valid JSON')
-        const data = input[0]
-        console.log(data)
+function parseInput (val) {
+    let data = val
+    if (input[0].match(isFile)) {
+        data = fs.readFileSync(input[0])
     }
+    return data
 }
 
+function loadJson (val) {
+    let data
+    try {
+        data = JSON.parse(val)
+    } catch (e) {
+        if (e instanceof SyntaxError) {
+            data = val
+        }
+    }
+    return data
+}
+
+const data = parseInput(input)
+const json = loadJson(data)
+const result = jtx(json)
+
+console.log(result)

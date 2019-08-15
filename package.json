@@ -1,0 +1,27 @@
+{
+  "name": "jtx",
+  "version": "1.0.0",
+  "description": "JSON to XML",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wulfmann/jtx.git"
+  },
+  "main": "dist/jtx.js",
+  "module": "dist/jtx.mjs",
+  "unpkg": "dist/jtx.umd.js",
+  "source": "src/jtx.js",
+  "license": "MIT",
+  "private": false,
+  "bin": {
+    "jtx": "bin/jtx.js"
+  },
+  "scripts": {
+    "build": "microbundle",
+    "dev": "microbundle watch",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^24.8.0",
+    "microbundle": "^0.11.0"
+  }
+}

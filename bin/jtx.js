@@ -26,7 +26,7 @@ function loadJson (val) {
     return data
 }
 
-const data = parseInput(input)
+const data = parseInput(input[0])
 const json = loadJson(data)
 const result = jtx(json)
 

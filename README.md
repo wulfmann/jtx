@@ -54,4 +54,5 @@ jtx(myJson, { header: true })
 ### Available Options
 
 |name|type|default|
+|----|----|-------|
 |header|boolean|false|

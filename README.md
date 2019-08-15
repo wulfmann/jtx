@@ -2,7 +2,7 @@
 
 ## Description
 
-Tiny (~200b) JSON to XML conversion utility.
+Tiny JSON to XML conversion utility.
 
 ## Installation
 

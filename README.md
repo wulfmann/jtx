@@ -10,6 +10,8 @@ Tiny (~200b) JSON to XML conversion utility.
 
 ## Usage
 
+### Javascript
+
 ```js
 import jtx from 'jtx'
 
@@ -30,18 +32,21 @@ console.log(jtx(myJson))
 // <hello><there><0><i></i><am>1</am></0></there></hello>
 ```
 
-### Input
+#### Input
 
 Accepts:
-`String`
-`Object`
-`Array`
 
-### Output
+* `String`
+
+* `Object`
+
+* `Array`
+
+#### Output
 
 `XML String`
 
-### Options
+#### Options
 
 You can pass an optional configuration object as the last parameter:
 
@@ -51,8 +56,45 @@ jtx(myJson, { header: true })
 // <?xml version="1.0" encoding="UTF-8" standalone="no" ?><test>true</test>
 ```
 
-### Available Options
+##### Available Options
 
 |name|type|default|
 |----|----|-------|
 |header|boolean|false|
+
+
+### CLI
+
+#### Usage
+
+Example One:
+
+```bash
+$ jtx test
+
+test
+```
+
+Example Two:
+
+`test.json`
+
+```json
+    {
+        "hello": "there"
+    }
+```
+
+```bash
+$ jtx test.json
+
+<hello>there</hello>
+```
+
+#### Input
+
+Accepts:
+
+* `String`
+
+* `Filepath`

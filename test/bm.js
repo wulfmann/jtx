@@ -1,5 +1,5 @@
 const test = require('./testcase.json')
-const jtx = require('./src/jtx')
+const jtx = require('../src/jtx')
 
 let results = []
 const count = 100000
